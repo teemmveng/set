@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET! - The Pulse of Dining</title>
+    
+    <meta name="robots" content="noindex, nofollow, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="google-extended" content="noindex, nofollow">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0a0a0a;
+            --darker: #050505;
+        }
+
+        body { 
+            font-family: 'Lato', sans-serif; 
+            background-color: var(--darker); 
+            color: #f3f3f3; 
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .brand-font { font-family: 'Montserrat', sans-serif; }
+        
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+
+        /* Kultainen hohde */
+        .pulse-gold { animation: pulse-gold 3s infinite; }
+        
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.9) 60%, rgba(5,5,5,1) 100%);
+        }
+
+        .waitlist-input:focus {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            outline: none;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <section class="relative h-screen flex flex-col items-center justify-center text-center px-4">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2670&auto=format&fit=crop" 
+                 alt="Atmospheric Dining" 
+                 class="w-full h-full object-cover opacity-50">
+        </div>
+        <div class="absolute inset-0 z-0 hero-overlay"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto mt-[-50px]">
+            <h1 class="text-7xl md:text-9xl font-extrabold tracking-widest mb-2 text-gold drop-shadow-lg select-none">
+                SET!
+            </h1>
+            <p class="text-lg md:text-2xl tracking-[0.4em] uppercase mb-12 text-gray-400 font-light">
+                Gastronomic Immersion
+            </p>
+
+            <h2 class="text-3xl md:text-5xl font-light leading-tight mb-8">
+                90 Minuuttia. <span class="font-bold text-white">5 Ruokalajia.</span><br>
+                <span class="text-gold italic">Täydellinen rytmi.</span>
+            </h2>
+
+            <p class="text-gray-400 text-base md:text-lg max-w-lg mx-auto mb-10 font-light leading-relaxed">
+                Unohda odottelu. SET! on uuden sukupolven ravintolaelämys, jossa valo, ääni ja maku kohtaavat saumattomasti. Ei show, vaan flow.
+            </p>
+
+            <form id="waitlistForm" class="bg-white/10 backdrop-blur-lg p-2 rounded-full border border-white/20 flex flex-col md:flex-row max-w-lg mx-auto shadow-2xl transition-all hover:border-gold/50">
+                <input type="email" id="emailInput" placeholder="Sähköpostiosoitteesi..." 
+                       class="waitlist-input bg-transparent text-white px-6 py-4 flex-grow placeholder-gray-400 text-center md:text-left rounded-full text-lg" required>
+                <button type="submit" id="joinBtn" class="bg-gold text-black font-bold py-4 px-10 rounded-full hover:bg-yellow-500 transition-all duration-300 uppercase tracking-wider text-sm md:text-base pulse-glow whitespace-nowrap mt-2 md:mt-0">
+                    Liity Listalle
+                </button>
+            </form>
+
+            <div class="mt-8 flex flex-col items-center gap-2 text-sm text-gray-500">
+                <div class="flex items-center gap-2">
+                    <span class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-gold"></span>
+                    </span>
+                    <p class="uppercase tracking-widest">Helsinki Pilot — Talvi 2025</p>
+                </div>
+                <p class="text-xs opacity-60">Vain 500 ensimmäistä saa kutsun avajaisiin.</p>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-gray-500">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <section class="py-24 bg-darker px-6 relative border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="group p-6 rounded-2xl hover:bg-white/5 transition-all duration-500">
+                <div class="text-gold text-5xl mb-6 transform group-hover:scale-110 transition-transform"><i class="fa-solid fa-clock"></i></div>
+                <h3 class="text-2xl font-bold mb-4 text-white">90 Minuuttia</h3>
+                <p class="text-gray-400 font-light">Elämä on kiireistä. Illallisen ei tarvitse venyä. Tarkasti orkestroitu aikataulu takaa, että ehdit nauttia.</p>
+            </div>
+            <div class="group p-6 rounded-2xl hover:bg-white/5 transition-all duration-500">
+                <div class="text-gold text-5xl mb-6 transform group-hover:scale-110 transition-transform"><i class="fa-solid fa-utensils"></i></div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Italian Soul</h3>
+                <p class="text-gray-400 font-light">Klassista italialaista käsityötä modernilla otteella. 5 ruokalajin menu, joka on suunniteltu herättämään kaikki aistit.</p>
+            </div>
+            <div class="group p-6 rounded-2xl hover:bg-white/5 transition-all duration-500">
+                <div class="text-gold text-5xl mb-6 transform group-hover:scale-110 transition-transform"><i class="fa-solid fa-lightbulb"></i></div>
+                <h3 class="text-2xl font-bold mb-4 text-white">Light & Sound</h3>
+                <p class="text-gray-400 font-light">Ympäristö elää ruoan mukana. Valot ja äänet luovat rytmin, joka ohjaa iltaa alkupaloista jälkiruokaan.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-12 border-t border-white/10 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <h1 class="text-3xl font-bold text-gold mb-2">SET!</h1>
+                <p class="text-gray-500 text-sm">Dining as a Service.</p>
+            </div>
+            <div class="flex gap-6 text-gray-400 text-xl">
+                <a href="#" class="hover:text-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-700 text-xs">
+            &copy; 2025 SET! Dining Oy. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const form = document.getElementById('waitlistForm');
+        const btn = document.getElementById('joinBtn');
+        const input = document.getElementById('emailInput');
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if(input.value) {
+                const originalText = btn.innerText;
+                btn.innerText = "Liitytään...";
+                btn.disabled = true;
+                btn.classList.add('opacity-75');
+
+                setTimeout(() => {
+                    btn.innerText = "Olet listalla!";
+                    btn.classList.remove('bg-gold', 'text-black', 'hover:bg-yellow-500');
+                    btn.classList.add('bg-green-600', 'text-white', 'cursor-default');
+                    input.value = '';
+                    input.placeholder = "Kiitos! Nähdään pian.";
+                    input.disabled = true;
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+</html>
