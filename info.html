@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET! - Info</title>
+    <meta name="robots" content="noindex, nofollow, noimageindex">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root { --gold: #D4AF37; --dark: #0a0a0a; --darker: #050505; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--darker); color: #f3f3f3; overflow-x: hidden; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        .text-gold { color: var(--gold); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <nav class="p-4 flex justify-between items-center border-b border-white/10 bg-black/90 backdrop-blur-md sticky top-0 z-50">
+        <a href="index.html" class="text-xl font-extrabold text-gold tracking-widest">SET!</a>
+        <div class="flex gap-4 text-xs uppercase tracking-widest font-bold">
+            <a href="menu.html" class="text-gray-400 hover:text-white">Menu</a>
+            <span class="text-gold">Info</span>
+        </div>
+    </nav>
+
+    <main class="flex-grow container mx-auto max-w-2xl px-6 py-16 text-center space-y-12">
+        
+        <header>
+            <h1 class="text-4xl font-extrabold text-white mb-2 uppercase tracking-widest">Yhteystiedot</h1>
+            <div class="h-1 w-20 bg-gold mx-auto rounded-full"></div>
+        </header>
+
+        <section class="bg-white/5 p-8 rounded-2xl border border-white/10">
+            <i class="fa-solid fa-location-dot text-3xl text-gold mb-4"></i>
+            <h2 class="text-xl font-bold text-white mb-2">Sijainti</h2>
+            <p class="text-gray-400">Kaupakeskus Tripla<br>00180 Helsinki</p>
+        </section>
+
+        <section class="bg-white/5 p-8 rounded-2xl border border-white/10">
+            <i class="fa-regular fa-clock text-3xl text-gold mb-4"></i>
+            <h2 class="text-xl font-bold text-white mb-2">Aukioloajat</h2>
+            <div class="text-gray-400 space-y-1">
+                <p><span class="text-white w-12 inline-block">TI-TO</span> 17:00 - 23:00</p>
+                <p><span class="text-white w-12 inline-block">PE-LA</span> 16:00 - 01:00</p>
+                <p><span class="text-white w-12 inline-block">SU</span> 17:00 - 23:00</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-lg font-bold text-white mb-2">Ota yhteyttä</h2>
+            <a href="mailto:info@setdining.fi" class="text-gold text-xl hover:underline">info@setdining.fi</a>
+        </section>
+
+    </main>
+
+    <footer class="bg-black py-8 border-t border-white/10 text-center text-xs text-gray-600">
+        &copy; 2025 SET! Dining Oy.
+    </footer>
+
+</body>
+</html>
