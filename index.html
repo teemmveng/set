@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* SET! Brändivärit ja tyylit */
         :root {
             --gold: #D4AF37;
             --dark: #0a0a0a;
@@ -27,12 +28,16 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .brand-font { font-family: 'Montserrat', sans-serif; }
+        /* TÄMÄ OLI TÄRKEÄ LISÄYS: Otsikot käyttävät eri fonttia */
+        h1, h2, h3, h4, h5, h6, .brand-font { 
+            font-family: 'Montserrat', sans-serif; 
+        }
         
         .text-gold { color: var(--gold); }
         .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
 
-        /* Kultainen hohde */
+        /* Kultainen hohde (Pulse Effect) */
         .pulse-gold { animation: pulse-gold 3s infinite; }
         
         @keyframes pulse-gold {
@@ -41,10 +46,12 @@
             100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
         }
 
+        /* Taustavideo/kuva overlay */
         .hero-overlay {
             background: linear-gradient(to bottom, rgba(5,5,5,0.4) 0%, rgba(5,5,5,0.9) 60%, rgba(5,5,5,1) 100%);
         }
 
+        /* Input kentän tyylittely */
         .waitlist-input:focus {
             box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
             outline: none;
@@ -62,7 +69,7 @@
         <div class="absolute inset-0 z-0 hero-overlay"></div>
 
         <div class="relative z-10 max-w-4xl mx-auto mt-[-50px]">
-            <h1 class="text-7xl md:text-9xl font-extrabold tracking-widest mb-2 text-gold drop-shadow-lg select-none">
+            <h1 class="text-7xl md:text-9xl font-extrabold tracking-widest mb-2 text-red-500 drop-shadow-lg select-none">
                 SET!
             </h1>
             <p class="text-lg md:text-2xl tracking-[0.4em] uppercase mb-12 text-gray-400 font-light">
@@ -71,20 +78,26 @@
 
             <h2 class="text-3xl md:text-5xl font-light leading-tight mb-8">
                 90 Minuuttia. <span class="font-bold text-white">5 Ruokalajia.</span><br>
-                <span class="text-gold italic">Täydellinen rytmi.</span>
+                <span class="text-gold bold italic">Täydellinen rytmi.</span>
             </h2>
 
             <p class="text-gray-400 text-base md:text-lg max-w-lg mx-auto mb-10 font-light leading-relaxed">
-                Unohda odottelu. SET! on uuden sukupolven ravintolaelämys, jossa valo, ääni ja maku kohtaavat saumattomasti. Ei show, vaan flow.
+                SET! on uuden sukupolven ravintolaelämys, jossa valo, ääni ja maku kohtaavat saumattomasti. Ei show, vaan flow.
             </p>
 
             <form id="waitlistForm" class="bg-white/10 backdrop-blur-lg p-2 rounded-full border border-white/20 flex flex-col md:flex-row max-w-lg mx-auto shadow-2xl transition-all hover:border-gold/50">
                 <input type="email" id="emailInput" placeholder="Sähköpostiosoitteesi..." 
                        class="waitlist-input bg-transparent text-white px-6 py-4 flex-grow placeholder-gray-400 text-center md:text-left rounded-full text-lg" required>
                 <button type="submit" id="joinBtn" class="bg-gold text-black font-bold py-4 px-10 rounded-full hover:bg-yellow-500 transition-all duration-300 uppercase tracking-wider text-sm md:text-base pulse-glow whitespace-nowrap mt-2 md:mt-0">
-                    Liity Listalle
+                    Liity Listalle ja koe gastronominen immersio
                 </button>
             </form>
+
+            <div class="mt-12">
+    <a href="menu.html" class="text-gold border-b border-gold pb-1 hover:text-white hover:border-white transition-all uppercase tracking-widest text-sm font-bold">
+        Katso Menu &rarr;
+    </a>
+</div>
 
             <div class="mt-8 flex flex-col items-center gap-2 text-sm text-gray-500">
                 <div class="flex items-center gap-2">
@@ -92,9 +105,9 @@
                       <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75"></span>
                       <span class="relative inline-flex rounded-full h-3 w-3 bg-gold"></span>
                     </span>
-                    <p class="uppercase tracking-widest">Helsinki Pilot — Talvi 2025</p>
+                    <p class="uppercase tracking-widest">Timed. Tasted. Tremendious.</p>
                 </div>
-                <p class="text-xs opacity-60">Vain 500 ensimmäistä saa kutsun avajaisiin.</p>
+                <p class="text-xs opacity-60">Vain 100 ensimmäistä saa kutsun avajaisiin.</p>
             </div>
         </div>
 
